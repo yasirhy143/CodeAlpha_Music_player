@@ -1,0 +1,138 @@
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1f1f, #121212);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player {
+  background: #1e1e1e;
+  border-radius: 20px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Album Art */
+.album-art img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+.album-art img:hover {
+  transform: scale(1.05);
+}
+
+/* Song info */
+.song-info h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.song-info p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+.controls button {
+  font-size: 28px;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.controls button:hover {
+  background: #555;
+}
+
+/* Progress bar */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+#progress {
+  flex: 1;
+  -webkit-appearance: none;
+  background: #555;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1db954;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#progress::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Volume */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#volume {
+  flex: 1;
+}
+
+/* Playlist */
+.playlist {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 10px;
+}
+.playlist ul {
+  list-style: none;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+.playlist li {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.playlist li:hover, .playlist li.active {
+  background: #444;
+}
+.autoplay {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
